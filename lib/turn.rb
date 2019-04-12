@@ -26,10 +26,6 @@ def position_taken?(board, index)
   end
 end
 
-def input_to_index(n)
-  n = n.to_i - 1
-end
-
 def move(array, index, token="X")
   array[index] = token
 end
@@ -37,7 +33,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  index = input_to_index(input)
+  index = n.to_i - 1
   board = [" "] * 9
 
   move(board, index, "X")
