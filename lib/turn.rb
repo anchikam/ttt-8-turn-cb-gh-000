@@ -35,15 +35,16 @@ def move(array, index, token="X")
 end
 
 def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  if index >= 0 and index <= 8
-    board = [" "] * 9
+  while true
+    puts "Please enter 1-9:"
+    input = gets.strip
+    index = input_to_index(input)
 
-    move(board, index, "X")
-    display_board(board)
-  else
-    puts "You entered invalid index"
-  end
+    if valid_move?
+      move(board, index, "X")
+      display_board(board)
+    else
+      puts "You entered invalid index"
+    end
+
 end
