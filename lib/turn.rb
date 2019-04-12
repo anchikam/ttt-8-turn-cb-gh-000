@@ -38,8 +38,12 @@ def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
   index = input_to_index(input)
-  board = [" "] * 9
+  if index >= 0 and index <= 8
+    board = [" "] * 9
 
-  move(board, index, "X")
-  display_board(board)
+    move(board, index, "X")
+    display_board(board)
+  else
+    puts "You entered invalid index"
+  end
 end
