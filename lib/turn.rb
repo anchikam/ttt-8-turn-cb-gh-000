@@ -35,7 +35,8 @@ def move(array, index, token="X")
 end
 
 def turn(board)
-  while true
+  counter = 0
+  while counter < 9
     puts "Please enter 1-9:"
     input = gets.strip
     index = input_to_index(input)
@@ -46,5 +47,5 @@ def turn(board)
     else
       puts "You entered invalid index"
     end
-
+    counter += 1
 end
