@@ -43,5 +43,6 @@ def turn(board)
       display_board(board)
     else
       puts "You entered invalid index"
+      turn(board)
     end
 end
